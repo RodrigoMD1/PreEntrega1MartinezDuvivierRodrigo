@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import CartWidget from '../CartWidget/CartWidget';
 
 function NavScrollExample() {
   return (
@@ -19,13 +20,13 @@ function NavScrollExample() {
           >
             <Nav.Link href="#action1">Inicio</Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action3">remeras</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                Another action
+                pantalones
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                Something else here
+                accesorios
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#" >
@@ -44,6 +45,7 @@ function NavScrollExample() {
             <Button variant="outline-success">Search</Button>
           </Form>
         </Navbar.Collapse>
+        <CartWidget />
       </Container>
     </Navbar>
   );

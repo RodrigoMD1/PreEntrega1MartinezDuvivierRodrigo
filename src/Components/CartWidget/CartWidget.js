@@ -1,13 +1,14 @@
-import cart from './assets/cart.svg'
+
 import '../styles/CartWidget.css'
+import { BiCart } from "react-icons/bi";
 
 
 const CartWidget = () => {
     return(
         <div>
 
-            <img src={cart} alt="cart-widget" className="lOGO" />
-            0
+            <BiCart size={'2rem'} color={'GREEN'} />
+            3
         </div>
     )
 }
