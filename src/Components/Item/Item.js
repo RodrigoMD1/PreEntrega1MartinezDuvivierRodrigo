@@ -1,5 +1,4 @@
 import '../styles/Item.css'
-
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -24,11 +23,10 @@ const Item = ({ id, name, Image, price, stock }) => {
           <p>{price}$</p>
           <p>cantidad disponible {stock}</p>
           <ItemCount initial={1} stock={15} onAdd={handleAdd} />
-          <Link to={'/item/${id}'} className='Option'>ver detalles</Link>
+          <Link to={`/item/${id}`} className='Option'>ver detalles</Link>
         </div>
       </div>
     </div>
   )
 }
-
 export default Item;

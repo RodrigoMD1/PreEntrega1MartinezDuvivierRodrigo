@@ -4,6 +4,8 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 
 
 const ItemDetailContainer = () => {
+
+    
     const [product, setProduct] = useState(null)
     useEffect(() => {
         getProductById('1')
