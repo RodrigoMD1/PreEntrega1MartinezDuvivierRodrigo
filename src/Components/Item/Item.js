@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import ItemCount from '../ItemCount/ItemCount';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+import { Link } from 'react-router-dom';
 
 const Item = ({ id, name, Image, price, stock }) => {
   const [showDetail, setShowDetail] = useState(false);
@@ -23,10 +24,7 @@ const Item = ({ id, name, Image, price, stock }) => {
           <p>{price}$</p>
           <p>cantidad disponible {stock}</p>
           <ItemCount initial={1} stock={15} onAdd={handleAdd} />
-          <a href='#' onClick={(e) => {e.preventDefault(); setShowDetail(!showDetail);}}>
-            {showDetail ? 'Ocultar detalles' : 'Ver detalles'}
-          </a>
-          {showDetail && <ItemDetailContainer />}
+          <Link to={'/item/${id}'} className='Option'>ver detalles</Link>
         </div>
       </div>
     </div>
