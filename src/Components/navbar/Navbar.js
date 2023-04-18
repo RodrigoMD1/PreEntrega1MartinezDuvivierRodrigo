@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 function NavScrollExample() {
   return (
@@ -18,7 +19,7 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Inicio</Nav.Link>
+            <Nav.Link as={Link} to="/">Inicio</Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">pulseras</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -29,7 +30,7 @@ function NavScrollExample() {
                 collares
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" >
+            <Nav.Link as={Link} to="/Footer">
               Contacto
             </Nav.Link>
           </Nav>
