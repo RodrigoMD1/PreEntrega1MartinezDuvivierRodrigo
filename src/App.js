@@ -18,9 +18,11 @@ function App() {
 
         
         <Routes>
+          
           <Route path='/' element={<ItemListContainer greeting='bievenidos' />} />
           <Route exact path='/Footer' element={<Formulario />}/>
           <Route path='/item/:itemId' element={ItemDetailContainer}/>
+          
         </Routes>
       </div>
     </BrowserRouter>
