@@ -4,18 +4,31 @@ import NavBar from './Components/navbar/Navbar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import HeroSection from './Components/HeroSection/HeroSection';
-import ItemCount from './Components/ItemCount/ItemCount';
+import { BrowserRouter, Routes, Route, Router } from 'react-router-dom';
+import Formulario from './Components/FooterSection/Footer';
+
 
 
 function App() {
   return (
-    <div className="App">
-     <HeroSection />
-      <NavBar />
-      <ItemListContainer greeting={'bievenidos'}/>
-      <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('cantidad agregada',quantity)}/>
-      
-    </div>
+    <BrowserRouter>
+
+      <div className="App">
+        <HeroSection />
+        <NavBar />
+        <ItemListContainer greeting={'bievenidos'} />
+
+        <Routes>
+
+          <Route exact path='/Footer' element={<Formulario />}></Route>
+
+        </Routes>
+
+
+
+      </div>
+
+    </BrowserRouter>
   );
 }
 

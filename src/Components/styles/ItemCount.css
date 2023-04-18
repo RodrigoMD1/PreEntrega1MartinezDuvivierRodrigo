@@ -1,8 +1,15 @@
-.button{
-    color: red;
-    size: 100%;
+
+.Number{
+    margin: 25px;
+}
+button{
+    height: 50px;
+    
+}
+.Counter .Controls  {
+    display: inline-flex;
+    justify-content: center;
+    margin: 5px;
+    
 }
 
-.Counter{
-    background-color:grey;
-}

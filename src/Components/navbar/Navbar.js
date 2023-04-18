@@ -20,21 +20,21 @@ function NavScrollExample() {
           >
             <Nav.Link href="#action1">Inicio</Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">remeras</NavDropdown.Item>
+              <NavDropdown.Item href="#action3">pulseras</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                pantalones
+                anillos
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                accesorios
+                collares
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#" >
               Contacto
             </Nav.Link>
           </Nav>
-            
-          
+
+
           <Form className="d-flex">
             <Form.Control
               type="search"

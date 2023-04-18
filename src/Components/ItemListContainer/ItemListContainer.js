@@ -2,37 +2,39 @@ import { useEffect, useState } from 'react'
 import '../styles/ItemListContainer.css'
 import { getProducts } from '../../asyncMock'
 import ItemList from '../ItemList/ItemList'
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 
 
 
 
 const ItemListContainer = ({ greeting }) => {
-    const[products, setProducts] = useState([])
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
         getProducts()
-        .then(response =>{
-            setProducts(response)
-        })
-        .catch(error => {
-            console.log(error);
-        })
+            .then(response => {
+                setProducts(response)
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }, [])
 
 
 
 
- return(
-    <div className='BodyContainer'>
-        <h1>
-            {greeting}
-        </h1>
+    return (
+        <div className='BodyContainer'>
+            <h1>
+                {greeting}
+            </h1>
 
-        <ItemList products={products}/>
-        
+            <ItemList products={products} />
 
-    </div>
- )
+
+
+        </div>
+    )
 }
 
 export default ItemListContainer
