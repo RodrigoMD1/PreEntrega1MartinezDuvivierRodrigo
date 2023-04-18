@@ -5,7 +5,7 @@ import { getProductById } from '../../asyncMock'
 
 const ItemDetail = ({ id, name, Image, category, description, price, stock }) => {
     return (
-        <h2>
+        <h2 className='Descripcion'>
 
             descripcion:  {description}
 

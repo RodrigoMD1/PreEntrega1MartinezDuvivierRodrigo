@@ -13,7 +13,7 @@ function Formulario() {
   };
 
   return (
-    <div>
+    <div className='Form'>
       <h2>Formulario de Contacto</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
