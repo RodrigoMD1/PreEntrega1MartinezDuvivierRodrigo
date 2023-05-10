@@ -7,10 +7,13 @@ import HeroSection from './Components/HeroSection/HeroSection';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Formulario from './Components/FooterSection/Footer';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (
     <BrowserRouter>
+    <CartProvider>
+    
       <div className="App">
 
         <HeroSection />
@@ -25,6 +28,7 @@ function App() {
 
         </Routes>
       </div>
+      </CartProvider>
     </BrowserRouter>
   );
 }
